@@ -1,0 +1,6 @@
+#!/bin/bash
+
+######################
+# Start Sync Gateway #
+######################
+/opt/couchbase-sync-gateway/bin/sync_gateway /root/mobile-travel-sample/sync-gateway-config-travelsample.json 2>~/sg.out

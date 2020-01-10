@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#####################
+# Stop Sync Gateway #
+#####################
+service sync_gateway stop

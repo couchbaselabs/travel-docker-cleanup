@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#########################################
+# Clean up loag files from previous run #
+#########################################
+rm /root/sg.out
+rm /root/web.out
+
+##################################################
+# Remove all documents from travel-sample bucket #
+##################################################
+/opt/couchbase/bin/couchbase-cli bucket-delete -c localhost:8091 -u Administrator -p password --bucket=travel-sample
+
+#######################################
+# Install travel-sample sample bucket #
+#######################################
+/opt/couchbase/bin/cbdocloader -c localhost:8091 -u Administrator -p password -b travel-sample -m 100 -d /opt/couchbase/samples/travel-sample.zip -v

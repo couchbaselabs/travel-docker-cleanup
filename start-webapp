@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#########################
+# Start Web Application #
+#########################
+python /root/try-cb-python/travel.py 2>~/web.out
